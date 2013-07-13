@@ -1,0 +1,9 @@
+#Which ban commands plugin listens. This parameter should be written as lower case.
+ban_commands: 
+  - /ban
+#When new player joins first time, show player other servers banhistory to server staff or not.
+automatic_info: false
+#Log automatic info to console? Requires automatic_info to be true
+log_to_console: false
+#In a case of offline mode, automatic info sending doesnt work by default.
+is_bukkit: false

@@ -1,0 +1,54 @@
+name: rPbl
+main: risjarv.rpbl.main
+version: 1.0
+description: Public finnish banlist
+author: [risjarv]
+softdepend: [ProtocolLib]
+
+commands:
+  raportti:
+    description: This command shows info about player
+    usage: /raportti pelaaja [bans [serveri]]
+  tunnistaudu:
+    description: This command authenticates server
+    usage: /tunnistaudu serverin_nimi salasana
+  poista:
+    description: This command allows you request removal of accidental ban
+    usage: /poista pelaaja syy
+  rbpl:
+    description: This command currently only allows reload of plugin config
+    usage: /rbpl reload
+permissions:
+  rpbl.*:
+    description: Access to all permissions
+    children:
+      rpbl.ban: true
+      rpbl.report: true
+      rbpl.register: true
+      rbpl.remove: true
+      rbpl.autoinfo: true
+      rbpl.reload: true
+  rpbl.mod:
+    description: Moderator permissions
+    children:
+      rbpl.ban: true
+      rpbl.report: true
+      rpbl.autoinfo: true
+  rbpl.reload:
+    description: Allows you to reload plugin config
+    default: false
+  rbpl.autoinfo:
+    description: Allows you to see new player previous bannhistory automatically, if config option automatic_info is true
+    default: false
+  rpbl.ban:
+    description: Allows you to send ban to list
+    default: false
+  rbpl.report:
+    description: Allows you to see player report
+    default: false
+  rbpl.register:
+    description: Allows you to register server
+    default: false
+  rbpl.remove:
+    description: Allows you request remove of accidental ban
+    default: false
