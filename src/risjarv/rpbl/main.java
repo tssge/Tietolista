@@ -41,7 +41,7 @@ import risjarv.rpbl.util.network;
  */
 public class main extends JavaPlugin implements Listener {
 
-    /** The ban command. */
+    /** The list which contains ban commands that we want to process. */
     public List<String> banCommand;
     
     /** The automatic info. */
@@ -68,7 +68,7 @@ public class main extends JavaPlugin implements Listener {
     /** The hero chat listener. */
     private HeroChatListener heroChatListener;
     
-    /** The exec. */
+    /** The Command Executor instance (class Command). */
     private Command exec;
 
     /* (non-Javadoc)
