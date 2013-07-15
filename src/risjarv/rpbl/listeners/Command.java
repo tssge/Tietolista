@@ -1,3 +1,15 @@
+/*****************************************************************
+ *  
+ * Command
+ * 
+ * @version 1.0
+ * 
+ * @author Risjarv
+ *  
+ * Copyright (c) 2013 - 2013, Risjarv, All rights reserved.
+ * 
+ ****************************************************************/
+
 package risjarv.rpbl.listeners;
 
 import java.util.HashMap;
@@ -12,18 +24,31 @@ import org.bukkit.scheduler.BukkitTask;
 import risjarv.rpbl.main;
 import risjarv.rpbl.util.network;
 
-/*
- * @author risjarv
+/**
+ * The class Command.
+ * 
+ * Handles all commands passed to this plugin.
  */
 public class Command implements CommandExecutor {
 
+    /** The instance of plugins main class. */
     private main plugin;
+    
+    /** The msg. */
     public Map<String,String> msg = new ConcurrentHashMap<String, String>();
 
+    /**
+     * Instantiates a new command.
+     *
+     * @param plugin the plugin
+     */
     public Command(main plugin) {
-	this.plugin = plugin;
+    	this.plugin = plugin;
     }
 
+    /* (non-Javadoc)
+     * @see org.bukkit.command.CommandExecutor#onCommand(org.bukkit.command.CommandSender, org.bukkit.command.Command, java.lang.String, java.lang.String[])
+     */
     @Override
     public boolean onCommand(final CommandSender cs, org.bukkit.command.Command cmds, String label, final String[] args) {
         String cmd = cmds.getName();
