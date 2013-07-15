@@ -12,7 +12,6 @@
 
 package risjarv.rpbl.listeners;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Bukkit;
