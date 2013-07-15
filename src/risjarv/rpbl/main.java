@@ -35,12 +35,11 @@ public class main extends JavaPlugin implements Listener {
 
     public String cServer = "";
 
-    private HashMap<String,Integer> State;
+    private HashMap<String,Integer> State = new HashMap<String, Integer>();
+    public HashMap<String, String> Queue = new HashMap<String, String>();
     private ChatListener chatListener;
     private HeroChatListener heroChatListener;
     private Command exec;
-
-    public HashMap<String,String> Queue;
 
     @Override
     public void onEnable() {
@@ -49,9 +48,6 @@ public class main extends JavaPlugin implements Listener {
         this.banCommand = this.getConfig().getStringList("ban_commands");
         this.automaticInfo = this.getConfig().getBoolean("automatic_info");
         this.automaticInfo_toConsole = this.getConfig().getBoolean("log_to_console");
-
-        Queue = new HashMap<>();
-        State = new HashMap<>();
 
         getServer().getPluginManager().registerEvents(this,this);
 
@@ -174,7 +170,7 @@ public class main extends JavaPlugin implements Listener {
 
         if( b == 0L && automaticInfo == true ) {
 
-            Map<String,String> map = new ConcurrentHashMap<>();
+            Map<String,String> map = new ConcurrentHashMap<String, String>();
             map.put("player", event.getName());
             String text = network.sendData("http://localhost/search.php",map);
 

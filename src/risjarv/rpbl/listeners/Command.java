@@ -18,7 +18,7 @@ import risjarv.rpbl.util.network;
 public class Command implements CommandExecutor {
 
     private main plugin;
-    public Map<String,String> msg = new ConcurrentHashMap<>();
+    public Map<String,String> msg = new ConcurrentHashMap<String, String>();
 
     public Command(main plugin) {
 	this.plugin = plugin;
@@ -33,7 +33,7 @@ public class Command implements CommandExecutor {
         if ( cmd.toLowerCase().equals("/raportti") && p.hasPermission("rbpl.report") ) {
             if( args.length >= 0 ) {
 
-                final Map<String, String> map = new ConcurrentHashMap<>();
+                final Map<String, String> map = new ConcurrentHashMap<String, String>();
 
                 map.put("player", args[0]);
                 if (args.length > 1 && args[1].equalsIgnoreCase("bans")) {
