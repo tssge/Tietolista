@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Tietolista</groupId>
+  <artifactId>Tietolista</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <!-- Bukkit can be found at the following repository -->
+    <repository>
+      <id>bukkit-repo</id>
+      <url>http://repo.bukkit.org/content/groups/public/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+	  <groupId>org.bukkit</groupId>
+	  <artifactId>bukkit</artifactId>
+      <version>1.6.1-R0.1-SNAPSHOT</version>
+	</dependency>
+    <dependency>
+  	  <groupId>org.dthielke</groupId>
+  	  <artifactId>Herochat</artifactId>
+  	  <version>5.6.1</version>
+  	  <scope>system</scope>
+      <systemPath>${project.basedir}/lib/Herochat.jar</systemPath>
+    </dependency>
+  </dependencies>
+</project>
